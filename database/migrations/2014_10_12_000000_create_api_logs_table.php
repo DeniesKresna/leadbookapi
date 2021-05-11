@@ -20,7 +20,7 @@ class CreateApiLogsTable extends Migration
             $table->string('ip')->nullable();
             $table->string('ua')->nullable();
             $table->longText('response')->nullable();
-            $table->timestamp('created_at');
+            $table->timestamp('created_at')->useCurrent();
         });
     }
 
