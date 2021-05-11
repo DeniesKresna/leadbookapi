@@ -103,8 +103,9 @@ class AuthController extends ApiController
         if ($validator->fails()) {
             return self::error_response($validator->errors(),"",422);
         }
+        $now = date("Y-m-d H:i:s");
         $user_verify = UserVerify::where(["code"=>$code, "type"=>"forget-password"])
-                        ->where('expired','>=','NOW()')->first();
+                        ->where('expired','>=',$now)->first();
         if(!$user_verify)
             return self::error_response([],"Cant change user password. Your link is not active or has been expired.");
         
