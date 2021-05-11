@@ -103,14 +103,14 @@
 																		<td class="h1 center pb30" style="color:#333333; font-family:'Cinzel', Georgia, serif; font-size:40px; line-height:46px; text-transform:uppercase; text-align:center; padding-bottom:30px;"><multiline>User Mail Confirmation</multiline></td>
 																	</tr>
 																	<tr>
-																		<td class="text-center pb40 mp0" style="color:#666666; font-family:'Roboto Slab', Georgia, serif; font-size:16px; line-height:34px; text-align:center; font-weight:300; padding-bottom:40px;"><multiline>Hi {{$name}}, Please click the link below to continue your reqistration. <span class="m-hide"><br /></span><span class="m-hide"><br /></span>Generated Link : https://localhost:3000/#/login?code={{$code}}<br />The link will be expired after 2 hours.</multiline></td>
+																		<td class="text-center pb40 mp0" style="color:#666666; font-family:'Roboto Slab', Georgia, serif; font-size:16px; line-height:34px; text-align:center; font-weight:300; padding-bottom:40px;"><multiline>Hi {{$name}}, Please click the link below to continue your reqistration. <span class="m-hide"><br /></span><span class="m-hide"><br /></span>Generated Link : http://103.55.38.109/leadbook/#/login?code={{$code}}<br />The link will be expired after 2 hours.</multiline></td>
 																	</tr>
 																	@else
 																	<tr>
 																		<td class="h1 center pb30" style="color:#333333; font-family:'Cinzel', Georgia, serif; font-size:40px; line-height:46px; text-transform:uppercase; text-align:center; padding-bottom:30px;"><multiline>New Password Generated</multiline></td>
 																	</tr>
 																	<tr>
-																		<td class="text-center pb40 mp0" style="color:#666666; font-family:'Roboto Slab', Georgia, serif; font-size:16px; line-height:34px; text-align:center; font-weight:300; padding-bottom:40px;"><multiline>Hi {{$name}}, Please click the link below to continue reset your password. <span class="m-hide"><br /></span><span class="m-hide"><br /></span>Generated Link : https://localhost:3000/#/login?resetcode={{$code}}<br />The link will be expired after 2 hours.</multiline></td>
+																		<td class="text-center pb40 mp0" style="color:#666666; font-family:'Roboto Slab', Georgia, serif; font-size:16px; line-height:34px; text-align:center; font-weight:300; padding-bottom:40px;"><multiline>Hi {{$name}}, Please click the link below to continue reset your password. <span class="m-hide"><br /></span><span class="m-hide"><br /></span>Generated Link : http://103.55.38.109/leadbook/#/login?resetcode={{$code}}<br />The link will be expired after 2 hours.</multiline></td>
 																	</tr>
 																	@endif
 																</table>
