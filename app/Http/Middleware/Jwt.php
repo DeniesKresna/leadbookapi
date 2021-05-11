@@ -16,16 +16,11 @@ class Jwt extends BaseMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next, $role="")
+    public function handle($request, Closure $next)
     {
         $user = auth()->user();
         if(!$user){
             return response()->json(['message' => 'No Session'],401);
-        }
-        if($role != ""){
-            if($user->role != $type){
-                return response()->json(['message' => 'You dont have access'],403);
-            }
         }
         /*
         try {
