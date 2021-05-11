@@ -103,7 +103,7 @@ class AuthController extends ApiController
         if ($validator->fails()) {
             return self::error_response($validator->errors(),"",422);
         }
-        $now = date("Y-m-d H:i:s");
+	$now = date("Y-m-d H:i:s");
         $user_verify = UserVerify::where(["code"=>$code, "type"=>"forget-password"])
                         ->where('expired','>=',$now)->first();
         if(!$user_verify)
@@ -137,8 +137,9 @@ class AuthController extends ApiController
     }
 
     public function check_reset_code($code){
+	$now = date("Y-m-d H:i:s");
         $user_verify = UserVerify::where(["code"=>$code, "type"=>"forget-password"])
-                ->where('expired','>=','NOW()')->first();
+                ->where('expired','>=',$now)->first();
         if($user_verify)
             return self::success_response();
         else
